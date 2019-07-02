@@ -5,7 +5,13 @@ project (OpenCV2-cookbook)
 find_package(OpenCV REQUIRED)
 
 set(CHAPTERS
+    ch01
     ch02
+)
+
+set(ch01
+    main1
+    main2
 )
 
 set(ch02
