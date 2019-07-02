@@ -9,6 +9,7 @@ find_package(OpenCV REQUIRED)
 set(CHAPTERS
     ch01
     ch02
+    ch04
 )
 
 set(ch01
@@ -21,6 +22,10 @@ set(ch02
     colorReduce
     contrast
     addImages
+)
+
+set(ch04
+    histograms
 )
 
 include_directories(${OpenCV_INCLUDE_DIRS})
