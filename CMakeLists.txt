@@ -1,6 +1,8 @@
 cmake_minimum_required (VERSION 2.8)
 project (OpenCV2-cookbook)
 
+list(APPEND CMAKE_CXX_FLAGS "-std=c++11 -Wno-unsequenced")
+
 # find the required packages
 find_package(OpenCV REQUIRED)
 
@@ -16,6 +18,9 @@ set(ch01
 
 set(ch02
     saltImage
+    colorReduce
+    contrast
+    addImages
 )
 
 include_directories(${OpenCV_INCLUDE_DIRS})
