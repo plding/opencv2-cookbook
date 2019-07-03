@@ -11,6 +11,7 @@ set(CHAPTERS
     ch02
     ch04
     ch05
+    ch06
 )
 
 set(ch01
@@ -33,6 +34,10 @@ set(ch05
     morphology
     morpho2
     segment
+)
+
+set(ch06
+    filters
 )
 
 include_directories(${OpenCV_INCLUDE_DIRS})
