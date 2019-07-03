@@ -10,6 +10,7 @@ set(CHAPTERS
     ch01
     ch02
     ch04
+    ch05
 )
 
 set(ch01
@@ -26,6 +27,10 @@ set(ch02
 
 set(ch04
     histograms
+)
+
+set(ch05
+    morphology
 )
 
 include_directories(${OpenCV_INCLUDE_DIRS})
