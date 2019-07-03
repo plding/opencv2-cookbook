@@ -31,6 +31,8 @@ set(ch04
 
 set(ch05
     morphology
+    morpho2
+    segment
 )
 
 include_directories(${OpenCV_INCLUDE_DIRS})
