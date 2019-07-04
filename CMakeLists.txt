@@ -12,6 +12,7 @@ set(CHAPTERS
     ch04
     ch05
     ch06
+    ch07
 )
 
 set(ch01
@@ -39,6 +40,10 @@ set(ch05
 set(ch06
     filters
     derivatives
+)
+
+set(ch07
+    contours
 )
 
 include_directories(${OpenCV_INCLUDE_DIRS})
