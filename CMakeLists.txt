@@ -38,6 +38,7 @@ set(ch05
 
 set(ch06
     filters
+    derivatives
 )
 
 include_directories(${OpenCV_INCLUDE_DIRS})
