@@ -13,6 +13,7 @@ set(CHAPTERS
     ch05
     ch06
     ch07
+    ch08
 )
 
 set(ch01
@@ -44,6 +45,11 @@ set(ch06
 
 set(ch07
     contours
+    canny
+)
+
+set(ch08
+    interestPoints
 )
 
 include_directories(${OpenCV_INCLUDE_DIRS})
