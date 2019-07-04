@@ -16,50 +16,16 @@ set(CHAPTERS
     ch08
 )
 
-set(ch01
-    main1
-    main2
-)
-
-set(ch02
-    saltImage
-    colorReduce
-    contrast
-    addImages
-)
-
-set(ch04
-    histograms
-)
-
-set(ch05
-    morphology
-    morpho2
-    segment
-)
-
-set(ch06
-    filters
-    derivatives
-)
-
-set(ch07
-    contours
-    canny
-)
-
-set(ch08
-    interestPoints
-)
-
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 set(LIBS ${OpenCV_LIBS})
 
 foreach(CHAPTER ${CHAPTERS})
-    foreach(DEMO ${${CHAPTER}})
-        add_executable(${DEMO} ${CHAPTER}/${DEMO}.cpp)
-        target_link_libraries(${DEMO} ${LIBS}) 
-        set_target_properties(${DEMO} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${CHAPTER})
-    endforeach(DEMO)
+    file(GLOB SOURCES ${CHAPTER}/*.cpp)
+    foreach(SOURCE ${SOURCES})
+        get_filename_component(TARGET ${SOURCE} NAME_WE)
+        add_executable(${TARGET} ${SOURCE})
+        target_link_libraries(${TARGET} ${LIBS}) 
+        set_target_properties(${TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${CHAPTER})
+    endforeach(SOURCE)
 endforeach(CHAPTER)
